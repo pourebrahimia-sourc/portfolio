@@ -3,122 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amir Pourebrahimi | Videographer & Motion Designer</title>
+<title>Amir | Video Editor • Motion Designer • AI Creator</title>
+<link rel="icon" type="image/png" href="images/logo-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Inter',sans-serif;
-  background:#080C14;
-  color:#E8EDF5;
+  font-family:'Poppins',sans-serif;
+  background:#0A0B1A;
+  color:#F5F5F7;
   overflow-x:hidden;
   line-height:1.7;
 }
 :root{
-  --gold:#F0A500;
-  --dark:#080C14;
-  --dark2:#0D1320;
-  --dark3:#111827;
+  --grad-start:#F0A500;
+  --grad-mid:#F0A500;
+  --grad-end:#F0A500;
+  --orange:#F0A500;
+  --dark:#0A0B1A;
+  --dark2:#0F1028;
+  --dark3:#141530;
   --border:rgba(255,255,255,0.07);
-  --text:#E8EDF5;
-  --muted:#8A95A8;
-  --gradient:linear-gradient(90deg,#6A00FF,#FF2D7D,#FFBA00);
+  --text:#F5F5F7;
+  --muted:#8A8FA8;
+  --gradient:#F0A500;
 }
-/* Gradient text utility */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:#0A0B1A;}
+::-webkit-scrollbar-thumb{background:#F0A500;border-radius:2px;}
+.container{width:92%;max-width:1300px;margin:auto;}
+
+/* GRAD TEXT */
 .grad{
   background:var(--gradient);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
 }
-::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:#080C14;}
-::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#6A00FF,#FFBA00);border-radius:2px;}
-.container{width:92%;max-width:1300px;margin:auto;}
 
 /* HEADER */
 header{
   position:fixed;top:0;left:0;width:100%;z-index:999;
-  background:rgba(8,12,20,0.85);
+  background:rgba(10,11,26,0.85);
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
   transition:all .3s;
 }
 nav{height:78px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-size:22px;font-weight:800;color:var(--text);}
-.logo span{color:#FFBA00;}
+.logo img{height:40px;display:block;}
 nav ul{display:flex;gap:36px;list-style:none;}
 nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;transition:.3s;}
 nav a:hover{color:var(--text);}
 nav a.active{color:var(--text);}
 .hire-btn{
-  padding:12px 26px;background:var(--gradient);color:#fff;
-  border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;transition:.3s;
+  padding:12px 26px;
+  background:var(--gradient);
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;font-size:14px;
+  transition:.3s;
 }
 .hire-btn:hover{opacity:0.85;transform:translateY(-2px);}
 
 /* HERO */
 .hero{
-  min-height:100vh;display:flex;align-items:center;
-  position:relative;overflow:hidden;padding-top:78px;
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding-top:78px;
 }
 .hero-video{position:absolute;inset:0;z-index:0;}
-.hero-video video{width:100%;height:100%;object-fit:cover;opacity:0.2;}
+.hero-video video{width:100%;height:100%;object-fit:cover;opacity:0.15;}
 .hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(105deg,rgba(8,12,20,0.97) 40%,rgba(8,12,20,0.7) 75%,rgba(8,12,20,0.4) 100%);
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(105deg,rgba(10,11,26,0.97) 40%,rgba(10,11,26,0.5) 100%);
 }
 .hero-bg-img{
-  position:absolute;inset:0;z-index:1;
-  width:100%;height:100%;
-  object-fit:cover;object-position:right center;
+  position:absolute;
+  top:80px;right:0;
+  width:60%;height:600px;
+  object-fit:cover;
+  z-index:1;
+  -webkit-mask-image:linear-gradient(to left,rgba(0,0,0,0.8) 40%,transparent 100%);
+  mask-image:linear-gradient(to left,rgba(0,0,0,0.8) 40%,transparent 100%);
 }
 .hero-content{
   position:relative;z-index:10;
-  width:92%;max-width:1300px;margin:auto;
-  padding:160px 0 100px;
+  padding:80px 0;
 }
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:10px;
-  font-size:13px;font-weight:600;color:#FFBA00;
-  letter-spacing:2.5px;text-transform:uppercase;margin-bottom:28px;
+  font-size:13px;font-weight:600;
+  letter-spacing:2.5px;text-transform:uppercase;
+  margin-bottom:28px;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
 }
-.hero-eyebrow::before{content:'';display:block;width:32px;height:2px;background:var(--gradient);border-radius:2px;}
+.hero-eyebrow::before{
+  content:'';display:block;
+  width:32px;height:2px;
+  background:var(--gradient);
+  border-radius:2px;
+  -webkit-text-fill-color:initial;
+}
 .hero h1{
-  font-size:82px;font-weight:900;line-height:1.0;
-  letter-spacing:-2px;max-width:860px;margin-bottom:30px;
+  font-size:80px;font-weight:900;
+  line-height:1.0;letter-spacing:-2px;
+  max-width:800px;margin-bottom:30px;
 }
-.hero h1 .line2{color:#FFBA00;}
-.hero h1 .line3{color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,0.25);}
-.hero-desc{max-width:560px;font-size:17px;color:var(--muted);line-height:1.8;margin-bottom:48px;}
+.hero h1 .line3{
+  color:transparent;
+  -webkit-text-stroke:1.5px rgba(255,255,255,0.2);
+}
+.hero-desc{
+  max-width:540px;font-size:17px;
+  color:var(--muted);line-height:1.8;
+  margin-bottom:48px;
+}
 .hero-cta{display:flex;gap:16px;margin-bottom:80px;}
 .btn-primary{
-  padding:16px 36px;background:var(--gradient);color:#fff;
-  border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;
+  padding:16px 36px;
+  background:var(--gradient);
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;font-weight:700;font-size:15px;
   transition:.3s;display:inline-flex;align-items:center;gap:8px;
 }
 .btn-primary:hover{opacity:0.85;transform:translateY(-3px);}
 .btn-secondary{
-  padding:16px 36px;border:1.5px solid rgba(255,255,255,0.15);
-  border-radius:8px;text-decoration:none;color:var(--text);
+  padding:16px 36px;
+  border:1.5px solid rgba(255,255,255,0.15);
+  border-radius:8px;
+  text-decoration:none;color:var(--text);
   font-weight:600;font-size:15px;transition:.3s;
   display:inline-flex;align-items:center;gap:8px;
 }
-.btn-secondary:hover{border-color:#FFBA00;color:#FFBA00;}
+.btn-secondary:hover{border-color:#F0A500;color:#fff;}
 .hero-stats{
-  display:flex;gap:56px;padding-top:48px;
-  border-top:1px solid var(--border);max-width:640px;
+  display:flex;gap:56px;
+  padding-top:48px;
+  border-top:1px solid var(--border);
+  max-width:480px;
 }
-.stat-item h2{font-size:52px;font-weight:900;line-height:1;letter-spacing:-2px;color:var(--text);}
-.stat-item h2 span{color:#FFBA00;}
-.stat-item p{font-size:13px;color:var(--muted);margin-top:6px;font-weight:500;text-transform:uppercase;letter-spacing:1px;}
+.stat-item h2{
+  font-size:52px;font-weight:900;
+  line-height:1;letter-spacing:-2px;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.stat-item p{
+  font-size:13px;color:var(--muted);
+  margin-top:6px;font-weight:500;
+  text-transform:uppercase;letter-spacing:1px;
+}
 
 /* SECTIONS */
 section{padding:120px 0;}
-.logo img{height:38px;display:block;}
 .section-tag{
   display:inline-flex;align-items:center;gap:8px;
   font-size:12px;font-weight:700;
@@ -128,46 +176,73 @@ section{padding:120px 0;}
   -webkit-text-fill-color:transparent;
   background-clip:text;
 }
-.section-tag::before{content:'';display:block;width:24px;height:1.5px;background:var(--gradient);border-radius:2px;}
+.section-tag::before{
+  content:'';display:block;
+  width:24px;height:1.5px;
+  background:var(--gradient);border-radius:2px;
+}
 .section-title{margin-bottom:64px;}
-.section-title h2{font-size:54px;font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--text);}
-.section-title h2 span{color:#FFBA00;}
+.section-title h2{
+  font-size:54px;font-weight:800;
+  letter-spacing:-1.5px;line-height:1.1;
+  color:var(--text);
+}
 
 /* FEATURED */
 .featured{background:var(--dark);}
 .featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .project-card{
-  background:var(--dark2);border:1px solid var(--border);
-  border-radius:16px;overflow:hidden;transition:.4s;cursor:pointer;
+  background:var(--dark2);
+  border:1px solid var(--border);
+  border-radius:16px;overflow:hidden;
+  transition:.4s;cursor:pointer;
+  position:relative;
 }
 .project-card:hover{
   transform:translateY(-8px);
-  border-color:rgba(240,165,0,0.3);
-  box-shadow:0 24px 48px rgba(0,0,0,0.4);
+  border-color:rgba(106,0,255,0.3);
+  box-shadow:0 24px 48px rgba(106,0,255,0.15);
 }
 .video-wrap{
   position:relative;width:100%;padding-top:56.25%;
-  background:#0a0f1a;overflow:hidden;
+  background:#0a0b1a;overflow:hidden;
 }
 .video-wrap iframe{
-  position:absolute;top:0;left:0;width:100%;height:100%;
-  border:none;
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;border:none;
 }
 .thumb-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 60%,rgba(8,12,20,0.95));
+  background:linear-gradient(180deg,transparent 60%,rgba(10,11,26,0.95));
   pointer-events:none;
 }
 .card-content{padding:24px;}
-.card-cat{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.card-title{font-size:17px;font-weight:700;color:var(--text);margin-bottom:16px;letter-spacing:-0.3px;}
+.card-cat{
+  font-size:11px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:10px;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.card-title{
+  font-size:17px;font-weight:700;
+  color:var(--text);margin-bottom:16px;
+  letter-spacing:-0.3px;
+}
 .badges{display:flex;flex-wrap:wrap;gap:8px;}
 .badges span{
   padding:6px 14px;border-radius:6px;
-  background:rgba(255,255,255,0.05);color:var(--muted);
-  font-size:12px;font-weight:600;border:1px solid var(--border);transition:.3s;
+  background:rgba(255,255,255,0.04);
+  color:var(--muted);
+  font-size:12px;font-weight:600;
+  border:1px solid var(--border);transition:.3s;
 }
-.project-card:hover .badges span{border-color:rgba(240,165,0,0.2);color:var(--text);}
+.project-card:hover .badges span{
+  border-color:rgba(106,0,255,0.25);
+  color:var(--text);
+}
 
 /* PORTFOLIO */
 .portfolio-section{background:var(--dark2);}
@@ -176,77 +251,162 @@ section{padding:120px 0;}
   background:var(--dark3);border:1px solid var(--border);
   border-radius:14px;overflow:hidden;transition:.4s;cursor:pointer;
 }
-.portfolio-item:hover{border-color:rgba(240,165,0,0.25);transform:translateY(-6px);}
+.portfolio-item:hover{
+  border-color:rgba(106,0,255,0.25);
+  transform:translateY(-6px);
+}
 .portfolio-item .video-wrap{padding-top:56.25%;}
 .portfolio-info{padding:18px;}
 .portfolio-info .card-cat{margin-bottom:10px;}
 .portfolio-info .badges span{font-size:11px;padding:5px 12px;}
 
-/* AI SECTION */
-.ai-section{background:var(--dark);}
+/* AI SHORTS */
+.ai-shorts-section{background:var(--dark);}
+.shorts-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.short-item{
+  background:var(--dark3);
+  border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;
+  transition:.4s;
+}
+.short-item:hover{border-color:rgba(106,0,255,0.25);transform:translateY(-6px);}
+.short-item .video-wrap{padding-top:177%;}
+
+/* AI TOOLS */
+.ai-section{background:var(--dark2);}
 .ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
 .ai-card{
-  background:var(--dark2);border:1px solid var(--border);
+  background:var(--dark3);border:1px solid var(--border);
   border-radius:16px;padding:36px;transition:.3s;
 }
-.ai-card:hover{border-color:rgba(240,165,0,0.3);transform:translateY(-4px);}
-.ai-card-icon{
-  width:52px;height:52px;
-  background:rgba(240,165,0,0.1);
-  border:1px solid rgba(240,165,0,0.2);
-  border-radius:12px;
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:20px;
+.ai-card:hover{
+  border-color:rgba(106,0,255,0.3);
+  transform:translateY(-4px);
 }
-.ai-card-icon svg{width:24px;height:24px;stroke:#FFBA00;}
-.ai-card h3{font-size:18px;font-weight:700;color:var(--text);margin-bottom:12px;}
-.ai-card p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:20px;}
+.ai-card h3{
+  font-size:18px;font-weight:700;
+  color:var(--text);margin-bottom:20px;
+}
 .ai-tags{display:flex;flex-wrap:wrap;gap:8px;}
 .ai-tags span{
   padding:5px 12px;border-radius:6px;
-  background:rgba(240,165,0,0.08);
-  color:#FFBA00;font-size:12px;font-weight:600;
-  border:1px solid rgba(240,165,0,0.15);
+  background:rgba(106,0,255,0.08);
+  font-size:12px;font-weight:600;
+  border:1px solid rgba(106,0,255,0.2);
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  border-image:var(--gradient) 1;
 }
 
 /* SKILLS */
-.skills-section{background:var(--dark2);}
-.skills-categories{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
-.skill-cat{background:var(--dark3);border:1px solid var(--border);border-radius:14px;padding:28px;}
+.skills-section{background:var(--dark);}
+.skills-categories{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:24px;margin-top:48px;
+}
+.skill-cat{
+  background:var(--dark2);
+  border:1px solid var(--border);
+  border-radius:14px;padding:28px;
+  position:relative;overflow:hidden;
+}
+.skill-cat::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:var(--gradient);
+}
 .skill-cat h3{
-  font-size:12px;font-weight:700;color:#FFBA00;
-  letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;
+  font-size:12px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:20px;
   padding-bottom:16px;border-bottom:1px solid var(--border);
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
 }
 .skill-cat ul{list-style:none;}
 .skill-cat li{
   font-size:14px;color:var(--muted);font-weight:500;
-  padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.04);
   display:flex;align-items:center;gap:8px;transition:.2s;
 }
 .skill-cat li:last-child{border-bottom:none;}
-.skill-cat li::before{content:'';display:block;width:4px;height:4px;background:var(--gradient);border-radius:50%;flex-shrink:0;}
+.skill-cat li::before{
+  content:'';display:block;
+  width:4px;height:4px;
+  background:var(--gradient);
+  border-radius:50%;flex-shrink:0;
+}
 .skill-cat li:hover{color:var(--text);}
 
 /* SOFTWARE */
-.software-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:48px;}
-.sw-card{
-  background:var(--dark3);border:1px solid var(--border);
-  border-radius:12px;padding:20px;text-align:center;transition:.3s;
+.software-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:16px;margin-top:48px;
 }
-.sw-card:hover{border-color:rgba(240,165,0,0.3);transform:translateY(-4px);}
+.sw-card{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:12px;padding:20px;text-align:center;transition:.3s;
+  position:relative;overflow:hidden;
+}
+.sw-card::before{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:2px;
+  background:var(--gradient);
+  transform:scaleX(0);transition:.3s;
+}
+.sw-card:hover::before{transform:scaleX(1);}
+.sw-card:hover{transform:translateY(-4px);}
 .sw-card p{font-size:13px;font-weight:600;color:var(--muted);}
 
 /* ABOUT */
-.about-section{background:var(--dark);}
-.about-grid{display:grid;grid-template-columns:1fr 480px;gap:100px;align-items:center;}
-.about-left p.lead{font-size:17px;color:var(--muted);line-height:1.9;margin-bottom:48px;}
+.about-section{background:var(--dark2);}
+.about-grid{
+  display:grid;grid-template-columns:1fr 480px;
+  gap:100px;align-items:center;
+}
+.about-left p.lead{
+  font-size:17px;color:var(--muted);
+  line-height:1.9;margin-bottom:48px;
+}
 .about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
-.about-stat{background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:24px;}
-.about-stat h3{font-size:44px;font-weight:900;letter-spacing:-2px;color:#FFBA00;line-height:1;}
-.about-stat p{font-size:12px;color:var(--muted);margin-top:8px;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.about-stat{
+  background:var(--dark3);
+  border:1px solid var(--border);
+  border-radius:12px;padding:24px;
+  position:relative;overflow:hidden;
+}
+.about-stat::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:var(--gradient);
+}
+.about-stat h3{
+  font-size:44px;font-weight:900;
+  letter-spacing:-2px;line-height:1;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.about-stat p{
+  font-size:12px;color:var(--muted);
+  margin-top:8px;font-weight:600;
+  text-transform:uppercase;letter-spacing:1px;
+}
 .about-img-wrap{position:relative;}
-.about-img-wrap img{width:100%;border-radius:20px;display:block;border:1px solid var(--border);}
+.about-img-wrap img{
+  width:100%;border-radius:20px;
+  display:block;border:1px solid var(--border);
+}
 .about-badge{
   position:absolute;bottom:-20px;left:-20px;
   background:var(--gradient);
@@ -256,10 +416,27 @@ section{padding:120px 0;}
 }
 
 /* RESUME */
-.resume-section{background:var(--dark2);}
+.resume-section{background:var(--dark);}
 .resume-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;}
-.resume-card{background:var(--dark3);border:1px solid var(--border);border-radius:16px;padding:40px;}
-.resume-card h3{font-size:13px;font-weight:700;color:#FFBA00;letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;}
+.resume-card{
+  background:var(--dark2);border:1px solid var(--border);
+  border-radius:16px;padding:40px;
+  position:relative;overflow:hidden;
+}
+.resume-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:var(--gradient);
+}
+.resume-card h3{
+  font-size:13px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:28px;
+  background:var(--gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
 .resume-card ul{list-style:none;}
 .resume-card li{
   padding:14px 0;border-bottom:1px solid var(--border);
@@ -267,41 +444,63 @@ section{padding:120px 0;}
   display:flex;align-items:center;gap:10px;transition:.2s;
 }
 .resume-card li:last-child{border-bottom:none;}
-.resume-card li::before{content:'';display:block;width:5px;height:5px;background:var(--gradient);border-radius:50%;flex-shrink:0;}
+.resume-card li::before{
+  content:'';display:block;
+  width:5px;height:5px;
+  background:var(--gradient);border-radius:50%;flex-shrink:0;
+}
 .resume-card li:hover{color:var(--text);}
 
 /* CONTACT */
-.contact-section{background:var(--dark);}
+.contact-section{background:var(--dark2);}
 .contact-inner{
-  background:var(--dark2);border:1px solid var(--border);
+  background:var(--dark3);border:1px solid var(--border);
   border-radius:24px;padding:80px;text-align:center;
   position:relative;overflow:hidden;
 }
 .contact-inner::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--gradient);
+}
+.contact-inner::after{
   content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);
-  width:500px;height:500px;
-  background:radial-gradient(circle,rgba(240,165,0,0.06) 0%,transparent 70%);
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(106,0,255,0.06) 0%,transparent 70%);
   pointer-events:none;
 }
-.contact-inner h2{font-size:58px;font-weight:900;letter-spacing:-2px;line-height:1.1;margin-bottom:20px;}
-.contact-inner h2 span{color:#FFBA00;}
-.contact-inner p{font-size:18px;color:var(--muted);max-width:580px;margin:0 auto 56px;}
+.contact-inner h2{
+  font-size:58px;font-weight:900;
+  letter-spacing:-2px;line-height:1.1;margin-bottom:20px;
+}
+.contact-inner p{
+  font-size:18px;color:var(--muted);
+  max-width:580px;margin:0 auto 56px;
+}
 .contact-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
 .contact-link{
   display:flex;align-items:center;gap:12px;
-  padding:18px 32px;background:rgba(255,255,255,0.04);
+  padding:18px 32px;
+  background:rgba(255,255,255,0.04);
   border:1px solid var(--border);border-radius:12px;
-  text-decoration:none;color:var(--text);font-weight:600;font-size:15px;transition:.3s;
+  text-decoration:none;color:var(--text);
+  font-weight:600;font-size:15px;transition:.3s;
 }
-.contact-link:hover{border-color:#FFBA00;color:#FFBA00;transform:translateY(-4px);}
+.contact-link:hover{
+  border-color:rgba(106,0,255,0.4);
+  transform:translateY(-4px);
+  background:rgba(106,0,255,0.08);
+}
 .contact-link svg{width:20px;height:20px;}
 
 /* FOOTER */
-footer{padding:40px 0;border-top:1px solid var(--border);background:var(--dark);}
+footer{
+  padding:40px 0;
+  border-top:1px solid var(--border);
+  background:var(--dark);
+}
 footer .container{display:flex;justify-content:space-between;align-items:center;}
 footer p{font-size:14px;color:var(--muted);}
-.footer-logo{font-size:18px;font-weight:800;color:var(--text);}
-.footer-logo span{color:#FFBA00;}
+.footer-logo img{height:32px;display:block;}
 
 /* FADE */
 .fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
@@ -315,6 +514,7 @@ footer p{font-size:14px;color:var(--muted);}
   .software-grid{grid-template-columns:repeat(3,1fr);}
   .about-grid{grid-template-columns:1fr;}
   .resume-grid,.ai-grid{grid-template-columns:1fr;}
+  .shorts-grid{grid-template-columns:repeat(2,1fr);}
   .contact-inner{padding:50px 30px;}
   .contact-inner h2{font-size:40px;}
 }
@@ -326,8 +526,10 @@ footer p{font-size:14px;color:var(--muted);}
   .section-title h2{font-size:38px;}
   .skills-categories{grid-template-columns:1fr;}
   .software-grid{grid-template-columns:repeat(2,1fr);}
+  .shorts-grid{grid-template-columns:repeat(2,1fr);}
   .hero-cta{flex-direction:column;}
   footer .container{flex-direction:column;gap:16px;text-align:center;}
+  .hero-bg-img{display:none;}
 }
 </style>
 </head>
@@ -336,7 +538,9 @@ footer p{font-size:14px;color:var(--muted);}
 <!-- HEADER -->
 <header id="header">
   <nav class="container">
-    <div class="logo"><img src="images/logo.png" alt="Amir"></div>
+    <div class="logo">
+      <img src="images/logo.png" alt="Amir">
+    </div>
     <ul>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#ai">AI Projects</a></li>
@@ -358,11 +562,11 @@ footer p{font-size:14px;color:var(--muted);}
   </div>
   <img class="hero-bg-img" src="images/hero-profile.png" alt="">
   <div class="hero-overlay"></div>
-  <div class="hero-content">
+  <div class="hero-content container">
     <div class="hero-eyebrow">Videographer · Editor · Motion Designer</div>
     <h1>
       Crafting Stories<br>
-      <span class="line2">Through Video</span><br>
+      <span class="grad">Through Video</span><br>
       <span class="line3">& Motion</span>
     </h1>
     <p class="hero-desc">
@@ -382,11 +586,11 @@ footer p{font-size:14px;color:var(--muted);}
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <h2>100<span>+</span></h2>
+        <h2>100+</h2>
         <p>Long-form Videos</p>
       </div>
       <div class="stat-item">
-        <h2>2K<span>+</span></h2>
+        <h2>2K+</h2>
         <p>Short Videos</p>
       </div>
     </div>
@@ -398,57 +602,51 @@ footer p{font-size:14px;color:var(--muted);}
   <div class="container">
     <div class="section-title fade-in">
       <div class="section-tag">Selected Work</div>
-      <h2>Featured <span>Projects</span></h2>
+      <h2>Featured <span class="grad">Projects</span></h2>
     </div>
     <div class="featured-grid">
 
-      <!-- PROJECT 1 — لینک یوتیوب رو اینجا جایگزین کن -->
       <div class="project-card fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/xf-YEUofd5U?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
           <div class="thumb-overlay"></div>
         </div>
         <div class="card-content">
-          <div class="card-cat">Educational</div>
-          <div class="card-title">Children's Educational Series</div>
+          <div class="card-cat">Commercial</div>
+          <div class="card-title">Commercial Advertising</div>
           <div class="badges">
             <span>Video Editing</span><span>Motion Graphics</span>
-            <span>Character Animation</span><span>Storytelling</span>
+            <span>Compositing</span><span>VFX</span>
           </div>
         </div>
       </div>
 
-      <!-- PROJECT 2 -->
       <div class="project-card fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/S1iv-dB2iDU?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
           <div class="thumb-overlay"></div>
         </div>
         <div class="card-content">
-          <div class="card-cat">Cinematography</div>
-          <div class="card-title">Drone & Studio Reel</div>
+          <div class="card-cat">AI Cinematic</div>
+          <div class="card-title">Cinematic AI Teaser</div>
           <div class="badges">
-            <span>Drone Operation</span><span>Cinematography</span>
-            <span>Color Grading</span><span>BTS</span>
+            <span>AI Cinematics</span><span>Cinematic Editing</span>
+            <span>Color Grading</span><span>Storytelling</span>
           </div>
         </div>
       </div>
 
-      <!-- PROJECT 3 -->
       <div class="project-card fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/vXDn5BrASoQ?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
           <div class="thumb-overlay"></div>
         </div>
         <div class="card-content">
-          <div class="card-cat">Educational</div>
-          <div class="card-title">Wildlife Educational Series</div>
+          <div class="card-cat">Corporate</div>
+          <div class="card-title">E-Commerce Brand Introduction</div>
           <div class="badges">
-            <span>Motion Graphics</span><span>Educational Design</span>
-            <span>Sound Design</span><span>Storytelling</span>
+            <span>Drone Cinematography</span><span>Track Matte</span>
+            <span>Rotoscoping</span><span>Motion Graphics</span>
           </div>
         </div>
       </div>
@@ -462,164 +660,123 @@ footer p{font-size:14px;color:var(--muted);}
   <div class="container">
     <div class="section-title fade-in">
       <div class="section-tag">All Work</div>
-      <h2>Complete <span>Portfolio</span></h2>
+      <h2>Complete <span class="grad">Portfolio</span></h2>
     </div>
     <div class="portfolio-grid">
 
       <div class="portfolio-item fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_4?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/ua7CxEB_sq0?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">Educational</div>
+          <div class="badges">
+            <span>Video Editing</span><span>Motion Graphics</span>
+            <span>Character Animation</span><span>Storytelling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/G5WOWjXUklg?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">Educational</div>
+          <div class="badges">
+            <span>Motion Graphics</span><span>Character Animation</span>
+            <span>Educational Design</span><span>Storytelling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/RF5XxcnK6eI?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="portfolio-info">
           <div class="card-cat">Commercial</div>
           <div class="badges">
-            <span>Commercial Editing</span><span>Motion Graphics</span><span>VFX</span><span>Color Grading</span>
+            <span>Commercial Editing</span><span>Motion Graphics</span>
+            <span>VFX</span><span>Color Grading</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-item fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_5?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/H3VMScHPqqI?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="portfolio-info">
-          <div class="card-cat">Commercial</div>
+          <div class="card-cat">Corporate / Motion Graphics</div>
           <div class="badges">
-            <span>Commercial Editing</span><span>Compositing</span><span>Color Grading</span>
+            <span>Motion Graphics</span><span>Cinema 4D</span>
+            <span>After Effects</span><span>Isometric Design</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-item fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_6?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/hz7v38IUb0M?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="portfolio-info">
-          <div class="card-cat">Corporate / Explainer</div>
+          <div class="card-cat">Industrial Documentary</div>
           <div class="badges">
-            <span>Motion Graphics</span><span>Explainer</span><span>Graphic Design</span>
+            <span>Drone Cinematography</span><span>Documentary Editing</span>
+            <span>Track Matte</span><span>Color Correction</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-item fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_7?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/D0z5UJ7ytS0?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="portfolio-info">
-          <div class="card-cat">Industrial / Corporate</div>
+          <div class="card-cat">Corporate / Industrial</div>
           <div class="badges">
-            <span>Videography</span><span>Drone</span><span>Color Grading</span>
+            <span>Motion Graphics</span><span>Corporate Video</span>
+            <span>Video Editing</span><span>Color Grading</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-item fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_8?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/ryVi0wsiH1k?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="portfolio-info">
-          <div class="card-cat">Industrial / Corporate</div>
+          <div class="card-cat">Behind The Scenes</div>
           <div class="badges">
-            <span>Cinematography</span><span>Drone</span><span>Camera Operation</span>
+            <span>Cinematography</span><span>Camera Operation</span>
+            <span>Drone Cinematography</span><span>Gimbal Operation</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-item fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_9?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/sPnFqaY_ykQ?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="portfolio-info">
-          <div class="card-cat">Travel Film</div>
+          <div class="card-cat">Travel Promotion</div>
           <div class="badges">
-            <span>Drone Cinematography</span><span>Gimbal</span><span>Color Grading</span>
+            <span>Cinematic Editing</span><span>Drone Cinematography</span>
+            <span>Gimbal Cinematography</span><span>Camera Movement</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-item fade-in">
         <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_10?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/MgjNJNn9BRU?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="portfolio-info">
-          <div class="card-cat">Motion Graphics</div>
+          <div class="card-cat">Healthcare / Explainer</div>
           <div class="badges">
-            <span>2D Animation</span><span>Typography Animation</span><span>Graphic Design</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-item fade-in">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_11?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="portfolio-info">
-          <div class="card-cat">Motion Graphics</div>
-          <div class="badges">
-            <span>UI Animation</span><span>Corporate Design</span><span>2D Animation</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-item fade-in">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_12?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="portfolio-info">
-          <div class="card-cat">Showreel / Promo</div>
-          <div class="badges">
-            <span>Fast Pace Editing</span><span>Motion Graphics</span><span>Sound Design</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-item fade-in">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_13?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="portfolio-info">
-          <div class="card-cat">Event / Promo</div>
-          <div class="badges">
-            <span>Cinematic Editing</span><span>Color Grading</span><span>BTS</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJECT 14 — AI Video -->
-      <div class="portfolio-item fade-in">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_14?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="portfolio-info">
-          <div class="card-cat">AI Video Production</div>
-          <div class="badges">
-            <span>AI Generation</span><span>ComfyUI</span><span>Motion Graphics</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJECT 15 -->
-      <div class="portfolio-item fade-in">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID_15?rel=0&modestbranding=1"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="portfolio-info">
-          <div class="card-cat">Motion Graphics</div>
-          <div class="badges">
-            <span>Motion Graphics</span><span>Editing</span><span>Color Grading</span>
+            <span>Motion Graphics</span><span>Corporate Editing</span>
+            <span>Typography</span><span>Graphic Design</span>
           </div>
         </div>
       </div>
@@ -628,50 +785,93 @@ footer p{font-size:14px;color:var(--muted);}
   </div>
 </section>
 
-<!-- AI PROJECTS -->
+<!-- AI SHORTS -->
+<section class="ai-shorts-section">
+  <div class="container">
+    <div class="section-title fade-in">
+      <div class="section-tag">AI Content</div>
+      <h2>AI Short-form <span class="grad">Content</span></h2>
+    </div>
+    <div class="shorts-grid">
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/_RDFoMexuxM?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges"><span>AI Video</span><span>Storytelling</span><span>Sound Design</span></div>
+        </div>
+      </div>
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/36ZvVYlwyCk?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges"><span>AI Video</span><span>Storytelling</span><span>Sound Design</span></div>
+        </div>
+      </div>
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/aXQX6nTEZwQ?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges"><span>AI Video</span><span>Storytelling</span><span>Sound Design</span></div>
+        </div>
+      </div>
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/IV2lqWaNCKI?rel=0&modestbranding=1" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges"><span>AI Video</span><span>Storytelling</span><span>Sound Design</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI TOOLS -->
 <section id="ai" class="ai-section">
   <div class="container">
     <div class="section-title fade-in">
       <div class="section-tag">Technology</div>
-      <h2>AI Tools &amp; <span>Technologies</span></h2>
+      <h2>AI Tools &amp; <span class="grad">Technologies</span></h2>
     </div>
     <div class="ai-grid fade-in">
-
       <div class="ai-card">
-        <h3>Vision & Video AI</h3>
+        <h3>Vision &amp; Video AI</h3>
         <div class="ai-tags">
           <span>ComfyUI</span><span>Wan 2</span><span>InsightFace</span>
           <span>MediaPipe</span><span>OpenCV</span><span>SAM 2</span>
           <span>FFmpeg</span><span>Whisper</span>
         </div>
       </div>
-
       <div class="ai-card">
-        <h3>Voice & Speech AI</h3>
+        <h3>Voice &amp; Speech AI</h3>
         <div class="ai-tags">
           <span>Fish Speech</span><span>Chatterbox TTS</span>
           <span>Hello 2</span><span>Whisper</span>
         </div>
       </div>
-
       <div class="ai-card">
-        <h3>Language & Automation</h3>
+        <h3>Language &amp; Automation</h3>
         <div class="ai-tags">
           <span>ChatGPT</span><span>Claude</span><span>DeepSeek</span>
           <span>Coze</span><span>Ollama</span><span>Google AI Studio</span>
           <span>Python</span><span>Playwright</span>
         </div>
       </div>
-
       <div class="ai-card">
-        <h3>Animation & Code</h3>
+        <h3>Animation &amp; Code</h3>
         <div class="ai-tags">
           <span>Remotion</span><span>Manim</span>
           <span>Codex</span><span>Lark Platform</span>
           <span>YouTube API</span><span>Google APIs</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -681,7 +881,7 @@ footer p{font-size:14px;color:var(--muted);}
   <div class="container">
     <div class="section-title fade-in">
       <div class="section-tag">Expertise</div>
-      <h2>Skills &amp; <span>Software</span></h2>
+      <h2>Skills &amp; <span class="grad">Software</span></h2>
     </div>
     <div class="skills-categories fade-in">
       <div class="skill-cat">
@@ -700,12 +900,12 @@ footer p{font-size:14px;color:var(--muted);}
           <li>Video Editing</li>
           <li>Motion Graphics</li>
           <li>Color Grading</li>
-          <li>VFX & Compositing</li>
+          <li>VFX &amp; Compositing</li>
           <li>Sound Design</li>
         </ul>
       </div>
       <div class="skill-cat">
-        <h3>Animation & Design</h3>
+        <h3>Animation &amp; Design</h3>
         <ul>
           <li>2D Animation</li>
           <li>3D Animation</li>
@@ -747,7 +947,7 @@ footer p{font-size:14px;color:var(--muted);}
       <div class="about-left fade-in">
         <div class="section-tag">About Me</div>
         <h2 style="font-size:48px;font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:28px;">
-          Visual Storyteller &amp;<br><span style="color:#FFBA00;">AI Video Creator</span>
+          Visual Storyteller &amp;<br><span class="grad">AI Video Creator</span>
         </h2>
         <p class="lead">
           Creative professional specializing in commercials, educational content,
@@ -769,9 +969,7 @@ footer p{font-size:14px;color:var(--muted);}
       <div class="about-right fade-in">
         <div class="about-img-wrap">
           <img src="images/profile.png" alt="Amir Pourebrahimi">
-          <div class="about-badge">
-            Available<br>for Remote Work
-          </div>
+          <div class="about-badge">Available<br>for Remote Work</div>
         </div>
       </div>
     </div>
@@ -783,20 +981,20 @@ footer p{font-size:14px;color:var(--muted);}
   <div class="container">
     <div class="section-title fade-in">
       <div class="section-tag">Resume</div>
-      <h2>Professional <span>Background</span></h2>
+      <h2>Professional <span class="grad">Background</span></h2>
     </div>
     <div class="resume-grid">
       <div class="resume-card fade-in">
         <h3>Experience</h3>
         <ul>
           <li>Commercial Video Production</li>
-          <li>Motion Graphics & Animation</li>
-          <li>Corporate & Industrial Films</li>
+          <li>Motion Graphics &amp; Animation</li>
+          <li>Corporate &amp; Industrial Films</li>
           <li>Educational Content Production</li>
-          <li>Graphic Design (Print & Digital)</li>
+          <li>Graphic Design (Print &amp; Digital)</li>
           <li>Drone Cinematography</li>
-          <li>Camera Operation & Direction</li>
-          <li>AI Video Production & Automation</li>
+          <li>Camera Operation &amp; Direction</li>
+          <li>AI Video Production &amp; Automation</li>
         </ul>
       </div>
       <div class="resume-card fade-in">
@@ -804,12 +1002,12 @@ footer p{font-size:14px;color:var(--muted);}
         <ul>
           <li>Adobe Premiere Pro</li>
           <li>Adobe After Effects</li>
-          <li>Adobe Photoshop & Illustrator</li>
+          <li>Adobe Photoshop &amp; Illustrator</li>
           <li>DaVinci Resolve</li>
-          <li>Cinema 4D & Blender</li>
-          <li>ComfyUI & Wan 2</li>
-          <li>Python & FFmpeg</li>
-          <li>ChatGPT & Claude & DeepSeek</li>
+          <li>Cinema 4D &amp; Blender</li>
+          <li>ComfyUI &amp; Wan 2</li>
+          <li>Python &amp; FFmpeg</li>
+          <li>ChatGPT &amp; Claude &amp; DeepSeek</li>
         </ul>
       </div>
     </div>
@@ -826,7 +1024,7 @@ footer p{font-size:14px;color:var(--muted);}
 <section id="contact" class="contact-section">
   <div class="container">
     <div class="contact-inner fade-in">
-      <h2>Let's Create<br><span>Something Amazing</span></h2>
+      <h2>Let's Create<br><span class="grad">Something Amazing</span></h2>
       <p>Available for remote video editing, motion graphics, commercial production and AI-powered creative projects worldwide.</p>
       <div class="contact-links">
         <a href="mailto:pourebrahimi.a@gmail.com" class="contact-link">
@@ -854,7 +1052,7 @@ footer p{font-size:14px;color:var(--muted);}
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{
-  header.style.background=window.scrollY>50?'rgba(8,12,20,0.97)':'rgba(8,12,20,0.85)';
+  header.style.background=window.scrollY>50?'rgba(10,11,26,0.97)':'rgba(10,11,26,0.85)';
 });
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',function(e){
