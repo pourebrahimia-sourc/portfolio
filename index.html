@@ -317,6 +317,20 @@ footer p{font-size:14px;color:var(--muted);}
   .hero-cta{flex-direction:column;}
   footer .container{flex-direction:column;gap:16px;text-align:center;}
 }
+  .ai-shorts-section{background:var(--dark);}
+.shorts-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.short-item{
+  background:var(--dark3);
+  border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;
+  transition:.4s;
+}
+.short-item:hover{border-color:rgba(240,165,0,0.25);transform:translateY(-6px);}
+.short-item .video-wrap{padding-top:177%;}
 </style>
 </head>
 <body>
@@ -575,7 +589,70 @@ footer p{font-size:14px;color:var(--muted);}
     </div>
   </div>
 </section>
+<!-- AI SHORTS -->
+<section class="ai-shorts-section">
+  <div class="container">
+    <div class="section-title fade-in">
+      <div class="section-tag">AI Content</div>
+      <h2>AI Short-form <span>Content</span></h2>
+    </div>
+    <div class="shorts-grid">
 
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/_RDFoMexuxM?rel=0&modestbranding=1"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges">
+            <span>AI Video</span><span>Storytelling</span><span>Sound Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/36ZvVYlwyCk?rel=0&modestbranding=1"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges">
+            <span>AI Video</span><span>Storytelling</span><span>Sound Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/aXQX6nTEZwQ?rel=0&modestbranding=1"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges">
+            <span>AI Video</span><span>Storytelling</span><span>Sound Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="short-item fade-in">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/IV2lqWaNCKI?rel=0&modestbranding=1"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="portfolio-info">
+          <div class="card-cat">AI Short</div>
+          <div class="badges">
+            <span>AI Video</span><span>Storytelling</span><span>Sound Design</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <!-- AI PROJECTS -->
 <section id="ai" class="ai-section">
   <div class="container">
